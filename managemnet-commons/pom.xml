@@ -10,37 +10,16 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>management-security</artifactId>
+    <artifactId>managemnet-commons</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>management-security</name>
-    <description>management-security project for Spring Boot</description>
+    <name>managemnet-commons</name>
+    <description>managemnet-commons project for Spring Boot</description>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
         </dependency>
 
         <dependency>

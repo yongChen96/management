@@ -1,10 +1,10 @@
-package com.example.managementsecurity;
+package com.example.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ManagementSecurityApplicationTests {
+class ManagementServerApplicationTests {
 
     @Test
     void contextLoads() {

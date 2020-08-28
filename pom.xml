@@ -19,6 +19,11 @@
 
     <modules>
         <module>management-security</module>
+        <module>managemnet-commons</module>
+        <module>management-rest</module>
+        <module>management-biz</module>
+        <module>management-entity</module>
+        <module>management-server</module>
     </modules>
 
     <properties>
@@ -33,6 +38,7 @@
         <mybatisPlus.version>3.3.2</mybatisPlus.version>
         <knife4j.version>2.0.4</knife4j.version>
         <redis.version>2.3.3.RELEASE</redis.version>
+        <module.version>0.0.1-SNAPSHOT</module.version>
     </properties>
 
     <dependencyManagement>
