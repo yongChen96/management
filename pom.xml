@@ -17,6 +17,10 @@
     <packaging>pom</packaging>
     <description>management 项目管理平台</description>
 
+    <modules>
+        <module>management-security</module>
+    </modules>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
