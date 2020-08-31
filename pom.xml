@@ -36,9 +36,14 @@
         <hutool.version>5.3.10</hutool.version>
         <commons.version>3.11</commons.version>
         <mybatisPlus.version>3.3.2</mybatisPlus.version>
+        <mybatisPlusGenerator.version>3.3.2</mybatisPlusGenerator.version>
         <knife4j.version>2.0.4</knife4j.version>
         <redis.version>2.3.3.RELEASE</redis.version>
         <module.version>0.0.1-SNAPSHOT</module.version>
+        <spring-commons.version>2.3.3.RELEASE</spring-commons.version>
+        <logstash-logback.version>5.3</logstash-logback.version>
+        <aspects.version>5.2.8.RELEASE</aspects.version>
+        <freemarker.version>2.3.3.RELEASE</freemarker.version>
     </properties>
 
     <dependencyManagement>
@@ -69,6 +74,16 @@
                 <version>${mybatisPlus.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatisPlusGenerator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-commons</artifactId>
+                <version>${spring-commons.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
@@ -78,6 +93,22 @@
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>${redis.version}</version>
             </dependency>
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logstash-logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${aspects.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>
