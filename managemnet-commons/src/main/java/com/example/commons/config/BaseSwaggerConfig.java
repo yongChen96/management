@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * @ClassName: BaseSwaggerConfig
- * @Description: swagger2 配置
+ * @Description: swagger2 基础配置
  * @Author: yongchen
  * @Date: 2020/8/31 9:54
  **/

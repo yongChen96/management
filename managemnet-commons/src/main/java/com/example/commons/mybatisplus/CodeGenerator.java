@@ -108,7 +108,7 @@ public class CodeGenerator {
         PackageConfig pc = new PackageConfig();
         // 包路径
         pc.setParent(codeGeneratorConfig.getParentPath());
-        // 表前缀
+        // 模块名
         // pc.setModuleName("t");
         //文件包名
         pc.setMapper("mapper");
@@ -181,8 +181,8 @@ public class CodeGenerator {
                 @Override
                 public String outputFile(TableInfo tableInfo) {
                     // 自定义输出文件名
-                    return codeGeneratorConfig.getOutputDir() + "/java/" + codeGeneratorConfig.getModelPath() +"/controller"
-                            + "/" + tableInfo.getControllerName() + StringPool.DOT_JAVA;
+                    return System.getProperty("user.dir") + "/management-rest/src/main/java/com/example/management/controller/"
+                            + tableInfo.getControllerName() + StringPool.DOT_JAVA;
                 }
             });
         }
@@ -191,8 +191,8 @@ public class CodeGenerator {
                 @Override
                 public String outputFile(TableInfo tableInfo) {
                     // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
-                    return codeGeneratorConfig.getOutputDir() + "/java/" + codeGeneratorConfig.getModelPath() +"/entity"
-                            + "/" + tableInfo.getEntityName() + StringPool.DOT_JAVA;
+                    return System.getProperty("user.dir") + "/management-entity/src/main/java/com/example/management/entity/"
+                            + tableInfo.getEntityName() + StringPool.DOT_JAVA;
                 }
             });
         }
@@ -201,8 +201,8 @@ public class CodeGenerator {
                 @Override
                 public String outputFile(TableInfo tableInfo) {
                     // 自定义输出文件名
-                    return codeGeneratorConfig.getOutputDir() + "/java/" + codeGeneratorConfig.getModelPath() +"/service"
-                            + "/" + tableInfo.getServiceName() + StringPool.DOT_JAVA;
+                    return System.getProperty("user.dir") + "/management-biz/src/main/java/com/example/management/service/"
+                            + tableInfo.getServiceName() + StringPool.DOT_JAVA;
                 }
             });
         }
@@ -211,8 +211,8 @@ public class CodeGenerator {
                 @Override
                 public String outputFile(TableInfo tableInfo) {
                     // 自定义输出文件名
-                    return codeGeneratorConfig.getOutputDir() + "/java/" + codeGeneratorConfig.getModelPath() +"/service/impl"
-                            + "/" + tableInfo.getServiceImplName() + StringPool.DOT_JAVA;
+                    return System.getProperty("user.dir") + "/management-biz/src/main/java/com/example/management/service/impl/"
+                            + tableInfo.getServiceImplName() + StringPool.DOT_JAVA;
                 }
             });
         }
@@ -221,8 +221,8 @@ public class CodeGenerator {
                 @Override
                 public String outputFile(TableInfo tableInfo) {
                     // 自定义输出文件名
-                    return codeGeneratorConfig.getOutputDir() + "/java/" + codeGeneratorConfig.getModelPath() +"/mapper"
-                            + "/" + tableInfo.getMapperName() + StringPool.DOT_JAVA;
+                    return System.getProperty("user.dir") + "/management-biz/src/main/java/com/example/management/mapper/"
+                            + tableInfo.getMapperName() + StringPool.DOT_JAVA;
                 }
             });
         }
@@ -231,8 +231,8 @@ public class CodeGenerator {
                 @Override
                 public String outputFile(TableInfo tableInfo) {
                     // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
-                    return codeGeneratorConfig.getOutputDir() + "/resources/mapper"
-                            + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
+                    return System.getProperty("user.dir") + "/management-biz/src/main/resources/mapper/"
+                            + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
                 }
             });
         }

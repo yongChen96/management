@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicLong;
  **/
 @Slf4j
 @Component
-public class IdGenerate implements IdentifierGenerator {
+public class IdGen implements IdentifierGenerator {
 
     private final AtomicLong al = new AtomicLong(1);
 

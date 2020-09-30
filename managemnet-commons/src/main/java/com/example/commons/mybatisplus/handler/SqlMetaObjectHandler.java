@@ -1,6 +1,7 @@
 package com.example.commons.mybatisplus.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
+import com.example.commons.mybatisplus.config.IdGen;
 import com.example.commons.mybatisplus.config.SuperEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
@@ -19,7 +20,7 @@ import java.util.UUID;
 @Slf4j
 public class SqlMetaObjectHandler implements MetaObjectHandler {
 
-    private IdGenerator idGenerator;
+    private IdGen idGenerator;
 
     /**
      * 主键id类型
@@ -56,7 +57,7 @@ public class SqlMetaObjectHandler implements MetaObjectHandler {
             update(metaObject, superEntity, "");
 
             if (flag) {
-                UUID id = idGenerator.generateId();
+                Number id = idGenerator.nextId(superEntity);
                 if (ID_TYPE_STRING.equals(metaObject.getGetterType(SuperEntity.ID).getName())) {
                     this.setFieldValByName(SuperEntity.ID, String.valueOf(id), metaObject);
                 } else {
